@@ -1,0 +1,39 @@
+#DAY2
+
+## git和github
+
+*git学习
+
+*github建仓，克隆，监视，推拉。
+
+*git clone
+
+*git status
+
+git pull
+
+git push
+
+*git commit
+
+##ros 仿真
+
+*小乌龟 turtlesim
+
+*运行箭头控制乌龟仿真，需要启动
+1 roscore
+2turtlesim
+
+*turtlesim 启动时需要启动两个节点，node节点启动乌龟仿真。key节点负责键盘。
+
+*通过pub直接发布速度到节点控制
+
+*本课通讯原理 由发布者发布到话题，再由订阅这接受话题内信息。
+
+*rosnode rostopic 以及-help
+
+* 建立ros工作空间，-p建立嵌套式空间
+
+* catkin_make编译
+
+*launch 文件 按格式写入 名字 功能包 节点名
