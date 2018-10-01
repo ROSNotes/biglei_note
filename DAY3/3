@@ -1,0 +1,56 @@
+# 第三天笔记	
+
+## 启动rqgt，介绍如何合理的获取传感器数据
+
+* 启动camera_start.launch
+
+* 启动rqt_plot绘图工具。可以绘制类似波形图的连续数据变化。
+
+* 注意合适的调整单位
+
+* 部分数据适合用echo看。
+
+* /tf 关键参数 x y z A B C 六个迪卡尔坐标系，A B C 三个使用弧度制。
+
+* rqt图型化调试工具可已看到组织结构关系，采集数据，绘制动态表
+
+## 导航
+
+* gazebo仿真
+1 roslaunch turtlebot_gazebo turtlebot_world.launch               //打开gazebo仿真
+2 roslaunch turtlebot_gazebo gmapping_demo.launch                 //加载乌龟demo 
+3 roslaunch turtlebot_rviz_launchers view_navigation.launch	  //加载rviz 看图形
+4 roslaunch turtlebot_teleop keyboard_teleop.launch		  //加载键盘控制仿真
+
+
+move base 路径规划器
+
+tf 坐标有关话题
+
+* slam导航实验与参数调整。
+
+地图建立时由于相机为固定，建立地图时需要机器行走若干距离后转圈，
+激光雷达由于原理误差，对玻璃墙无可奈何。
+
+参数调教中的关键参数
+
+max_vel_x/y 最大限直线速度x/y轴
+
+escape_vel 逃逸速度（该机型向后脱困时的速度）
+
+yaw_goal_toleranc 目标点偏差角容错
+
+xy_goal_toleranc  目标点位置容错
+
+pdist_scale   局部规划置信度
+
+gdist_scale  全局规划置信度
+
+vx_smple 限速度采样点
+
+vthea_smple 角度采样点
+
+obstacle_range   raytrace_range  需要查下ray的没搞动 
+
+
+ 
